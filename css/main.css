@@ -338,6 +338,15 @@ header.shrink .logo span {
   margin: 0 auto;
 }
 
+.hero h1,
+.hero h2,
+.hero h3,
+.hero h4,
+.hero h5,
+.hero h6 {
+  color: white;
+}
+
 .hero h1 {
   font-size: 3rem;
   margin-bottom: var(--spacing-md);
