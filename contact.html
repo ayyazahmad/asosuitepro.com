@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact ASO-Suite Pro - Get support, ask questions, or reach out to our team. Email, WhatsApp, and contact form available.">
+  <meta name="keywords" content="contact, support, email, message, help">
+  <meta name="author" content="AzAd Solutions">
+  <meta property="og:title" content="Contact - ASO-Suite Pro">
+  <meta property="og:description" content="Contact us for support, questions, or inquiries about ASO-Suite Pro.">
+  <meta property="og:url" content="https://asosuitepro.com/pages/contact.html">
+
+  <title>Contact Us - ASO-Suite Pro</title>
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/favicon.png">
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/main.css">
+  
+  <!-- Google reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  
+  <!-- Force override Tailwind's heading reset -->
+  <style>
+    h1, h2, h3, h4, h5, h6 { 
+      font-size: revert !important; 
+      font-weight: revert !important;
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <nav class="navbar container" role="navigation" aria-label="Main Navigation">
+      <a href="../index.html" class="logo" aria-label="ASO-Suite Pro Home">
+        <picture>
+          <img src="../assets/asosuite-logo.png" alt="ASO-Suite Pro" class="h-10">
+        </picture>
+        <span>ASO-Suite Pro</span>
+      </a>
+
+      <ul id="nav-menu" class="nav-menu">
+        <button class="nav-close" aria-label="Close navigation menu">
+          <span></span>
+          <span></span>
+        </button>
+        <li class="nav-item"><a href="../index.html">Home</a></li>
+        <li class="nav-item"><a href="../pages/about.html">About</a></li>
+        <li class="nav-item"><a href="../pages/features.html">Features</a></li>
+        <li class="nav-item"><a href="../pages/pricing.html">Pricing</a></li>
+        <li class="nav-item"><a href="../pages/faq.html">FAQ</a></li>
+        <li class="nav-item"><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Contact page hero">
+      <div class="hero-content container">
+        <h1 class="fade-in-down">Get In Touch</h1>
+        <p class="fade-in-down">Have questions? We'd love to hear from you</p>
+      </div>
+      <div class="breadcrumbs mt-6" style="justify-content: center;">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <span>Contact</span>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section" aria-labelledby="contact-content-title">
+      <div class="container max-w-5xl">
+        <div class="grid grid-2 gap-12">
+          <!-- Contact Form -->
+          <div class="fade-in-up">
+            <h2 id="contact-content-title" class="mb-6">Send us a Message</h2>
+            
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name *</label>
+                <input type="text" id="name" name="name" class="form-input" required aria-required="true" placeholder="John Doe">
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" required aria-required="true" placeholder="you@example.com">
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject *</label>
+                <input type="text" id="subject" name="subject" class="form-input" required aria-required="true" placeholder="How can we help?">
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="category" class="form-label">Category</label>
+                <select id="category" name="category" class="form-input">
+                  <option value="">Select a category (optional)</option>
+                  <option value="General">General Question</option>
+                  <option value="Issue">Report an Issue</option>
+                  <option value="Feature">Feature Request</option>
+                  <option value="Sales">Sales Inquiry</option>
+                  <option value="Support">Support Request</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea id="message" name="message" class="form-input form-textarea" required aria-required="true" placeholder="Tell us more about your inquiry..."></textarea>
+                <div class="form-error"></div>
+              </div>
+
+              <!-- Custom CAPTCHA -->
+              <div id="customCaptcha" style="margin-top: 15px; margin-bottom: 20px; padding: 12px; background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); border-radius: 8px; border: 1px solid #d1d5db;">
+                <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                  <!-- Checkbox -->
+                  <input type="checkbox" id="captchaCheck" style="width: 20px; height: 20px; cursor: pointer; accent-color: #0f766e; flex-shrink: 0;">
+                  
+                  <!-- Challenge Text -->
+                  <div style="flex: 1; min-width: 180px;">
+                    <label for="captchaCheck" style="cursor: pointer; user-select: none;">
+                      <p style="margin: 0; font-weight: 600; color: #1f2937; font-size: 13px;">Verify you're human</p>
+                      <p id="captchaChallenge" style="margin: 4px 0 0 0; font-size: 14px; color: #6b7280; font-weight: 500;">
+                        What is <span id="num1" style="font-weight: 700; color: #111827;">0</span> + <span id="num2" style="font-weight: 700; color: #111827;">0</span>?
+                      </p>
+                    </label>
+                  </div>
+                  
+                  <!-- Input -->
+                  <input type="number" id="captchaAnswer" placeholder="Answer" style="display: none; width: 120px; padding: 8px; border: 2px solid #d1d5db; border-radius: 6px; font-size: 15px; font-weight: 600; text-align: center; transition: all 0.3s; background: #ffffff; color: #111827; flex-shrink: 0;">
+                </div>
+                
+                <div id="captchaError" style="display: none; margin-top: 8px; padding: 8px; background: #fee2e2; color: #991b1b; border-radius: 4px; font-size: 12px; border-left: 3px solid #ef4444;">
+                  Incorrect answer. Try again.
+                </div>
+                
+                <style>
+                  #captchaCheck {
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                  }
+                  
+                  #captchaCheck:checked {
+                    accent-color: #14b8a6;
+                    transform: scale(1.05);
+                  }
+                  
+                  #captchaAnswer {
+                    font-variant-numeric: tabular-nums;
+                    color: #111827 !important;
+                  }
+                  
+                  #captchaAnswer::placeholder {
+                    color: #9ca3af;
+                  }
+                  
+                  #captchaAnswer:focus {
+                    border-color: #0f766e;
+                    box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.1);
+                    outline: none;
+                    color: #111827;
+                  }
+                </style>
+              </div>
+
+              <button type="submit" class="btn btn-accent w-full" id="submitBtn">Send Message</button>
+              
+              <!-- Loader -->
+              <div id="formLoader" style="display: none; text-align: center; margin-top: 1rem;">
+                <div style="display: inline-block; width: 40px; height: 40px; border: 4px solid #e5e7eb; border-top-color: #3b82f6; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                <p style="color: #6b7280; margin-top: 0.5rem; font-size: 14px;">Sending message...</p>
+              </div>
+              
+              <!-- Success Message -->
+              <div id="formSuccess" style="display: none; padding: 1rem; background: #d1fae5; border: 1px solid #6ee7b7; border-radius: 6px; color: #065f46; margin-top: 1rem;">
+                <strong>✓ Success!</strong> Your message has been sent. We'll get back to you soon.
+              </div>
+              
+              <!-- Error Message -->
+              <div id="formError" style="display: none; padding: 1rem; background: #fee2e2; border: 1px solid #fecaca; border-radius: 6px; color: #991b1b; margin-top: 1rem;">
+                <strong>✗ Error:</strong> <span id="errorMessage">Failed to send message. Please try again.</span>
+              </div>
+              
+              <style>
+                @keyframes spin {
+                  to { transform: rotate(360deg); }
+                }
+              </style>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="fade-in-up">
+            <h2 class="mb-6">Contact Information</h2>
+
+            <!-- Email -->
+            <div class="card mb-6">
+              <h3 class="font-bold mb-3 flex items-center gap-2">📧 Email</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">For inquiries and support inquiries:</p>
+              <a href="mailto:info@azad.co" class="text-primary font-bold text-lg">info@azad.co</a>
+              <p class="text-sm text-gray-500 mt-3">Response time: Usually within 24 hours</p>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="card mb-6">
+              <h3 class="font-bold mb-3 flex items-center gap-2">💬 WhatsApp</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">Quick chat support available:</p>
+              <a href="https://wa.me/1234567890?text=Hello%20ASO-Suite%20Pro%20Team" class="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600 transition" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.557.946-2.833 2.229-3.756 3.754-.923 1.525-1.285 3.12-1.24 4.736.046 1.616.518 3.205 1.4 4.647.882 1.441 2.173 2.57 3.637 3.336 1.465.766 3.033 1.047 4.608.961 1.575-.087 3.084-.574 4.32-1.387 1.236-.813 2.22-1.934 2.813-3.195.593-1.26.847-2.651.771-4.047-.076-1.396-.486-2.733-1.182-3.847-.696-1.115-1.674-2.033-2.847-2.614-1.173-.58-2.523-.854-3.933-.82z"/></svg>
+                Chat on WhatsApp
+              </a>
+              <p class="text-sm text-gray-500 mt-3">Response time: Usually within 2-4 hours</p>
+            </div>
+
+            <!-- Support Channels -->
+            <div class="card">
+              <h3 class="font-bold mb-3 flex items-center gap-2"><img src="../assets/icons/business/development.svg" alt="Support" class="w-5 h-5"> Other Support Channels</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="../pages/support.html" class="text-primary font-bold">Support Portal</a>
+                  <p class="text-sm text-gray-500">Access FAQs, documentation, and knowledge base</p>
+                </li>
+                <li>
+                  <a href="../pages/faq.html" class="text-primary font-bold">FAQ</a>
+                  <p class="text-sm text-gray-500">Answers to frequently asked questions</p>
+                </li>
+                <li>
+                  <a href="https://github.com/ayyazahmad/admin-security-optimization-suite" class="text-primary font-bold" target="_blank" rel="noopener">GitHub Issues</a>
+                  <p class="text-sm text-gray-500">Report bugs or request features</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Help -->
+    <section class="section section-alt" aria-labelledby="help-title">
+      <div class="container">
+        <div class="section-header mb-12">
+          <h2 id="help-title">How We Can Help</h2>
+          <p class="section-subtitle">Choose the type of support you need</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card fade-in-up text-center">
+            <div class="text-4xl mb-4">📖</div>
+            <h3 class="font-bold mb-2">Documentation</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Browse comprehensive guides and tutorials</p>
+            <a href="../pages/docs/index.html" class="text-primary font-bold mt-4 inline-block">View Docs →</a>
+          </div>
+
+          <div class="card fade-in-up text-center">
+            <div class="text-4xl mb-4">❓</div>
+            <h3 class="font-bold mb-2">FAQ</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Find quick answers to common questions</p>
+            <a href="../pages/faq.html" class="text-primary font-bold mt-4 inline-block">See FAQ →</a>
+          </div>
+
+          <div class="card fade-in-up text-center">
+            <div class="text-4xl mb-4">🎧</div>
+            <h3 class="font-bold mb-2">Support</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Direct assistance from our support team</p>
+            <a href="../pages/support.html" class="text-primary font-bold mt-4 inline-block">Get Help →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Response Time Info -->
+    <section class="section" aria-label="Response times">
+      <div class="container max-w-3xl">
+        <div class="card" style="background-color: var(--bg-tertiary);">
+          <h3 class="font-bold mb-4 flex items-center gap-2">⏱️ Response Time</h3>
+          
+          <div class="grid grid-2 gap-6">
+            <div>
+              <p class="font-bold text-primary mb-1">Standard Email Support</p>
+              <p class="text-sm">Response within 24-48 hours</p>
+            </div>
+
+            <div>
+              <p class="font-bold text-primary mb-1">Priority Support (Pro Edition)</p>
+              <p class="text-sm">Response within 4-12 hours</p>
+            </div>
+
+            <div>
+              <p class="font-bold text-primary mb-1">WhatsApp Support</p>
+              <p class="text-sm">Usually within 2-4 hours</p>
+            </div>
+
+            <div>
+              <p class="font-bold text-primary mb-1">Urgent Issues</p>
+              <p class="text-sm">Email with "URGENT" in subject line</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-section">
+        <picture class="mb-4 inline-block">
+          <img src="../assets/asosuite-logo.png" alt="ASO-Suite Pro" class="h-16">
+        </picture>
+        <p class="text-sm">Professional WordPress admin security and optimization toolkit with 22+ modular tools for advanced control and automation.</p>
+        <div class="social-links mt-4">
+          <a href="https://facebook.com/azadsolutions" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener"><img src="../assets/facebook.png" alt="Facebook" class="h-6"></a>
+          <a href="https://twitter.com/azadsolutions" class="social-icon" aria-label="Twitter" target="_blank" rel="noopener"><img src="../assets/twitter.png" alt="Twitter" class="h-6"></a>
+          <a href="https://github.com/ayyazahmad" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener"><img src="../assets/github.png" alt="GitHub" class="h-6"></a>
+          <a href="https://instagram.com/azadsolutions" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener"><img src="../assets/instagram.png" alt="Instagram" class="h-6"></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Product</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="docs/index.html">Documentation</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="https://github.com/ayyazahmad/admin-security-optimization-suite" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:info@azad.co">Email Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 AzAd Solutions. All rights reserved. | Made with ❤️ for developers</p>
+      <p>ASO-Suite Pro is open source and available on GitHub</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/923137563344?text=ASO-Suite%20pro%20related%20enquiry" class="whatsapp-float" aria-label="Chat on WhatsApp" title="Message us on WhatsApp" target="_blank" rel="noopener">
+    <picture>
+      <source srcset="../assets/images/whatsapp.webp" type="image/webp">
+      <img src="../assets/images/whatsapp.png" alt="WhatsApp">
+    </picture>
+  </a>
+
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+    <svg class="scroll-progress" width="50" height="50" viewBox="0 0 50 50"><circle cx="25" cy="25" r="20" fill="none" stroke="white" stroke-width="2"></circle></svg>
+    <span style="z-index: 1;">↑</span>
+  </button>
+
+  <script src="../js/theme-toggle.js" defer></script>
+  <script src="../js/lazy-load.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/form-handler.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page Not Found - ASO-Suite Pro">
+  <meta name="title" content="404 - Page Not Found">
+  <title>404 - Page Not Found - ASO-Suite Pro</title>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <header role="banner">
+    <nav class="navbar container" role="navigation" aria-label="Main Navigation">
+      <a href="./index.html" class="logo"><picture><img src="./assets/asosuite-logo.png" alt="ASO-Suite Pro" class="h-10"></picture><span>ASO-Suite Pro</span></a>
+      <ul id="nav-menu" class="nav-menu">
+        <li class="nav-item"><a href="./index.html">Home</a></li>
+        <li class="nav-item"><a href="./pages/about.html">About</a></li>
+        <li class="nav-item"><a href="./pages/features.html">Features</a></li>
+        <li class="nav-item"><a href="./pages/pricing.html">Pricing</a></li>
+        <li class="nav-item"><a href="./pages/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+        <button id="hamburger" class="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="section min-h-screen flex items-center">
+      <div class="container max-w-2xl text-center fade-in-up">
+        <div class="text-6xl font-bold text-primary mb-4">404</div>
+        <h1 class="text-4xl font-bold mb-4">Page Not Found</h1>
+        <p class="text-xl text-gray-600 mb-8">Sorry, the page you're looking for doesn't exist or has been moved.</p>
+
+        <div class="space-y-4 mb-8">
+          <p class="text-base text-gray-500">Here are some helpful links instead:</p>
+        </div>
+
+        <div class="grid grid-2 gap-4 mb-8">
+        <a href="./index.html" class="btn btn-primary">← Back to Home</a>
+        <a href="./pages/features.html" class="btn btn-secondary">View Features</a>
+        <a href="./pages/support.html" class="btn btn-outline">Get Help</a>
+        <a href="./pages/contact.html" class="btn btn-accent">Contact Us</a>
+        </div>
+
+        <div class="card bg-blue-50 dark:bg-blue-900 mt-12 p-6">
+          <p class="font-bold mb-2">Lost & Confused?</p>
+          <p class="text-sm mb-4">If you believe this is an error or need assistance, please don't hesitate to reach out to our support team.</p>
+          <a href="./pages/support.html" class="text-primary font-bold">Contact Support →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-bottom">
+      <p>&copy; 2026 ASO-Suite Pro. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./js/theme-toggle.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</body>
+</html>
