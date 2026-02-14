@@ -75,8 +75,15 @@
 }
 
 .btn-ghost:hover {
-  background-color: var(--bg-secondary);
-  border-color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: currentColor;
+  color: inherit;
+}
+
+.btn-ghost[style*="color: white"]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  color: white;
 }
 
 .btn-sm {
