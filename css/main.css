@@ -344,7 +344,7 @@ header.shrink .logo span {
 .hero h4,
 .hero h5,
 .hero h6 {
-  color: white;
+  color: white !important;
 }
 
 .hero h1 {
