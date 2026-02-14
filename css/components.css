@@ -91,6 +91,16 @@
   font-size: 0.875rem;
 }
 
+/* WhatsApp Button Styling */
+a[href*="wa.me"] {
+  transition: all 0.3s ease;
+}
+
+a[href*="wa.me"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+}
+
 .btn-lg {
   padding: var(--spacing-md) var(--spacing-lg);
   font-size: 1.1rem;
