@@ -20,6 +20,7 @@ header {
   z-index: var(--z-sticky);
   transition: var(--transition);
   box-shadow: 0 2px 8px var(--shadow-color);
+  width: 100%;
 }
 
 header.shrink {
