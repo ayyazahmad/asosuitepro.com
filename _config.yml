@@ -1,0 +1,19 @@
+# GitHub Pages Jekyll Configuration
+# Disabling Jekyll processing - this is a static site
+markdown: GFM
+theme: null
+
+# Ensure assets are served correctly
+exclude:
+  - .github
+  - .gitignore
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+
+# Include all assets
+include:
+  - .nojekyll
+  - assets
+  - ico
